@@ -25,7 +25,7 @@ hyperlane --version
 
 More on the cli: [Hyperlane CLI](https://docs.hyperlane.xyz/docs/reference/cli)
 
-### **2. Set Your Private Key (HYPE_KEY)**
+### **2. Set Your Private Key (HYP_KEY)**
 
 Export your private key as an environment variable. This is required for contract deployments:
 
@@ -48,7 +48,11 @@ During Initialization:
 1. Select Chains to Connect:
 
    - Source Chain (Token Origin): Base
+     - proxyAdmin: "0x4Ed7d626f1E96cD1C0401607Bf70D95243E3dEd1"
+     - proxy admin from the hyperlane registry: https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/base/addresses.yaml
    - Destination Chain: Optimism Mainnet
+     - proxyAdmin: "0xE047cb95FB3b7117989e911c6afb34771183fC35"
+     - proxy admin from the hyperlane registry: https://github.com/hyperlane-xyz/hyperlane-registry/blob/main/chains/optimism/addresses.yaml
 
 2. Choose Warp Route Type:
 
