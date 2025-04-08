@@ -4,6 +4,26 @@ This guide explains how to create and deploy a **Warp Route** for the **FAI toke
 
 ---
 
+## Primer
+
+Warp Routes let you move tokens between chains using Hyperlane. They’re modular bridges that you can configure and deploy yourself. Each Warp Route is made up of smart contracts on the chains you want to connect. These contracts talk to each other through Hyperlane’s general message passing system.
+
+You can create different types of Warp Routes depending on what you need. For example:
+
+- You can lock tokens on one chain and mint synthetic tokens on another
+- You can allow users to burn tokens on one chain and unlock them on another
+- You can create routes that pull collateral from multiple chains
+
+The way tokens are handled (locked, minted, burned, or released) depends on the type of Warp Route you set up.
+
+Under the hood, Warp Routes rely on a few key components:
+
+- A Mailbox contract on each chain to send and receive cross-chain messages. These are the entry/exit points to the chains.
+- A Warp Route contract deployed on each chain
+- An ISM (Interchain Security Module) that defines how messages are verified between chains. ISMs let you configure the security requirements for your chain.
+
+---
+
 ## Steps to Create and Deploy a Warp Route
 
 ### **1. Install the Hyperlane CLI**
@@ -43,7 +63,7 @@ Run the following command to set up the warp route:
 hyperlane warp init
 ```
 
-During Initialization:
+During initialization:
 
 1. Select Chains to Connect:
 
