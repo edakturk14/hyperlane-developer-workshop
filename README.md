@@ -22,9 +22,18 @@ Under the hood, Warp Routes rely on a few key components:
 - A Warp Route contract deployed on each chain
 - An ISM (Interchain Security Module) that defines how messages are verified between chains. ISMs let you configure the security requirements for your chain.
 
+## 🛠️ What are we building today?
+
+In this workshop, you’ll build a Warp Route for the FAI token, where:
+
+- Base is the origin chain that holds the original FAI token (Collateral token)
+- Optimism Mainnet is the destination chain, where a synthetic version of FAI will be created (Synthetic token)
+
+This is a Collateral → Synthetic Warp Route. The original FAI tokens on Base will be locked, and a synthetic (wrapped) FAI token will be minted on Optimism.
+
 ---
 
-## Steps to Create and Deploy a Warp Route
+## Step-by-Step: Create and Deploy a Warp Route
 
 ### **1. Install the Hyperlane CLI**
 
@@ -43,11 +52,11 @@ Verify your installation by checking the version:
 hyperlane --version
 ```
 
-More on the cli: [Hyperlane CLI](https://docs.hyperlane.xyz/docs/reference/cli)
+To learn more about the CLI, head over to: [Hyperlane CLI](https://docs.hyperlane.xyz/docs/reference/cli)
 
 ### **2. Set Your Private Key (HYP_KEY)**
 
-Export your private key as an environment variable. This is required for contract deployments:
+Export your private key as an environment variable. The CLI uses HYP_KEY to deploy contracts and interact with chains:
 
 ```bash
 export HYP_KEY=your_private_key_here
