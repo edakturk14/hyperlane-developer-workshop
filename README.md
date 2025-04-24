@@ -22,6 +22,13 @@ Under the hood, Warp Routes rely on a few key components:
 - A Warp Route contract deployed on each chain
 - An ISM (Interchain Security Module) that defines how messages are verified between chains. ISMs let you configure the security requirements for your chain.
 
+### Example Architecture
+Here's a simplified architecture diagram of a Collateral to Synthetic Warp Route using the lock-and-mint model to transfer ERC-20 tokens between two chains: 
+![Alt text](./warp-routes.png)
+
+> 👉 **More on Warp Routes:** [https://docs.hyperlane.xyz/docs/protocol/warp-routes/warp-routes-overview](https://docs.hyperlane.xyz/docs/protocol/warp-routes/warp-routes-overview)
+
+
 ## 🛠️ What are we building today?
 
 In this workshop, you’ll build a Warp Route for the FAI token, where:
@@ -34,6 +41,8 @@ This is a Collateral → Synthetic Warp Route. The original FAI tokens on Base w
 ---
 
 ## Step-by-Step: Create and Deploy a Warp Route
+
+*This guide follows the [How to Bridge a Token with Hyperlane Warp Routes](https://docs.hyperlane.xyz/docs/guides/deploy-warp-route) quickstart guide.*
 
 ### **1. Install the Hyperlane CLI**
 
